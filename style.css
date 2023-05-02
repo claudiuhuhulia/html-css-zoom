@@ -24,6 +24,7 @@ span{
 header{
     display: flex;
     justify-content: flex-end;
+    padding-bottom: 30px;
 }
 .fa-arrows-up-down-left-right{
     transform: rotate(45deg);
@@ -31,33 +32,73 @@ header{
 }
 
 .container{
-    width: 1600px;
+    width: 1700px;
     margin: 0 auto;
+    flex-shrink: 0;
 }
 main{
-    padding-top: 30px;
     overflow-y: auto;
     flex-grow: 1;
 }
 .row{
     display: flex;
-   flex-wrap: wrap;
     gap: 6px;
     justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
 }
-.card{
+.card, img{
     display: inline-block;
     margin-top: 10px;
+    position: relative;
 }
 
 footer{
-    flex-basis: 80px;
     background-color: gray;
+    display: flex;
+    flex-shrink: 0;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 .wrapper{
     display: flex;
     flex-direction: column;
-    height: 100vh;
-     
+    height: 100vh; 
+  
+}
+
+.user{
+    position: absolute;
+    background-color: rgba(122, 117, 117, 0.692);
+    left: 0;
+    bottom: 0;
+    padding: 8px 8px;
+}
+
+.mic > i, .cam > i{
+    font-size: 30px;
+    padding: 8px 10px 6px 10px;
+}
+
+.mic, .cam{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px 5px;
+}
+
+.left-section , .central-section{
+    display: flex;
+    align-items: baseline;
+}
+
+.left-section > i , .central-section > i{
+    padding: 0 10px 10px 0;
+    font-size: 10px;
+}
+.end-call{
+    color: red;
+    background-color: #545151;
+    padding: 30px 30px;
 }
